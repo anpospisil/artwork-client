@@ -1,5 +1,6 @@
-<mat-drawer-container class="container" autosize>
-    <mat-drawer #drawer class="sidenav" opened mode="side">
+<mat-drawer-container class="flex" autosize
+class="min-h-full max-w-7x1 mx-auto border-x">
+    <mat-drawer #drawer class="sidenav" opened mode="side" class="p-6">
      <div>
         Filter
      </div>
@@ -7,11 +8,13 @@
     
     </mat-drawer>
   
-    <div class="sidenav-content">
+    <div class="p-6">
       <button type="button" (click)="drawer.toggle()">
         nav
       </button>
     </div>
-  
+    <app-cards-header (columnsCountChange)="onColumnsCountChange($event)"></app-cards-header>
+    {{cols}}
   </mat-drawer-container>
+
   
