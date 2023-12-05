@@ -10,6 +10,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 
 
@@ -18,7 +19,9 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './pages/home/home.component';
-import { CardsHeaderComponent } from './components/cards-header/cards-header.component';
+import { CardsHeaderComponent } from './pages/home/cards-header/cards-header.component';
+import { FiltersComponent } from './pages/home/filters/filters.component';
+import { ItemBoxComponent } from './pages/home/item-box/item-box.component';
 
 
 @NgModule({
@@ -26,7 +29,9 @@ import { CardsHeaderComponent } from './components/cards-header/cards-header.com
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    CardsHeaderComponent
+    CardsHeaderComponent,
+    FiltersComponent,
+    ItemBoxComponent
   ],
   imports: [
     BrowserModule,
@@ -40,6 +45,7 @@ import { CardsHeaderComponent } from './components/cards-header/cards-header.com
     MatToolbarModule,
     MatDialogModule,
     MatMenuModule,
+    MatExpansionModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

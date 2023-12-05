@@ -1,10 +1,9 @@
 <mat-drawer-container class="flex" autosize
 class="min-h-full max-w-7x1 mx-auto border-x">
     <mat-drawer #drawer class="sidenav" opened mode="side" class="p-6">
-     <div>
-        Filter
-     </div>
-     
+
+      <!-- Filter -->
+      <app-filters (showCategory)="onShowCategory($event)"></app-filters>
     
     </mat-drawer>
   
@@ -14,7 +13,34 @@ class="min-h-full max-w-7x1 mx-auto border-x">
       </button>
     </div>
     <app-cards-header (columnsCountChange)="onColumnsCountChange($event)"></app-cards-header>
-    {{cols}}
+    {{cols}}  
+    <mat-grid-list
+    gutterSize="16"
+    [cols]="cols"
+    [rowHeight]="rowHeight"
+  >
+    <mat-grid-tile>
+      <app-item-box class="w-full" [fullWidthMode]="cols === 1"></app-item-box>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <app-item-box class="w-full" [fullWidthMode]="cols === 1"></app-item-box>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <app-item-box class="w-full" [fullWidthMode]="cols === 1"></app-item-box>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <app-item-box class="w-full" [fullWidthMode]="cols === 1"></app-item-box>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <app-item-box class="w-full" [fullWidthMode]="cols === 1"></app-item-box>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <app-item-box class="w-full" [fullWidthMode]="cols === 1"></app-item-box>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <app-item-box class="w-full" [fullWidthMode]="cols === 1"></app-item-box>
+    </mat-grid-tile>
+  </mat-grid-list>
   </mat-drawer-container>
 
   
