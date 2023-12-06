@@ -22,6 +22,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { CardsHeaderComponent } from './pages/home/cards-header/cards-header.component';
 import { FiltersComponent } from './pages/home/filters/filters.component';
 import { ItemBoxComponent } from './pages/home/item-box/item-box.component';
+import { StoreService } from './services/store.service';
 
 
 @NgModule({
@@ -31,7 +32,7 @@ import { ItemBoxComponent } from './pages/home/item-box/item-box.component';
     HomeComponent,
     CardsHeaderComponent,
     FiltersComponent,
-    ItemBoxComponent
+    ItemBoxComponent,
   ],
   imports: [
     BrowserModule,
@@ -47,7 +48,7 @@ import { ItemBoxComponent } from './pages/home/item-box/item-box.component';
     MatMenuModule,
     MatExpansionModule,
   ],
-  providers: [],
+  providers: [StoreService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
