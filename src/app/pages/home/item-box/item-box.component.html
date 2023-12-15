@@ -1,20 +1,20 @@
-<mat-card class="text-center h-[200]">
+<mat-card *ngIf="item" class="text-center h-[200]">
 <div>
   <img 
   class="mb-1 mx-auto"
-  src="https://via.placeholder.com/150"
+  [src]="item.image"
   >
   <div class="w-full">
     <div>
-      <h5>Placeholder</h5>
+      <h5>{{item.category}}</h5>
       <p class="truncate hover:whitespace-normal">
-        Artwork1
+        {{item.title}}
       </p>
-      <p *ngIf="fullWidthMode">Description</p>
+      <p *ngIf="fullWidthMode">{{item.description}}</p>
     </div>
     <div class="flex justify-between">
       <span class="text-red-400">
-        {{'150' | currency}}
+        {{item.price | currency}}
       </span>
     </div>
   </div>

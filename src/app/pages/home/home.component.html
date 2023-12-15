@@ -15,31 +15,20 @@ class="min-h-full max-w-7x1 mx-auto border-x">
     <app-cards-header (columnsCountChange)="onColumnsCountChange($event)"></app-cards-header>
     {{cols}}  
     <mat-grid-list
+
     gutterSize="16"
     [cols]="cols"
     [rowHeight]="rowHeight"
   >
-    <mat-grid-tile>
-      <app-item-box class="w-full" [fullWidthMode]="cols === 1"></app-item-box>
+    <mat-grid-tile *ngFor="let item of items">
+      <app-item-box
+      [item]="item"
+      class="w-full" 
+      [fullWidthMode]="
+      cols === 1">
+      </app-item-box>
     </mat-grid-tile>
-    <mat-grid-tile>
-      <app-item-box class="w-full" [fullWidthMode]="cols === 1"></app-item-box>
-    </mat-grid-tile>
-    <mat-grid-tile>
-      <app-item-box class="w-full" [fullWidthMode]="cols === 1"></app-item-box>
-    </mat-grid-tile>
-    <mat-grid-tile>
-      <app-item-box class="w-full" [fullWidthMode]="cols === 1"></app-item-box>
-    </mat-grid-tile>
-    <mat-grid-tile>
-      <app-item-box class="w-full" [fullWidthMode]="cols === 1"></app-item-box>
-    </mat-grid-tile>
-    <mat-grid-tile>
-      <app-item-box class="w-full" [fullWidthMode]="cols === 1"></app-item-box>
-    </mat-grid-tile>
-    <mat-grid-tile>
-      <app-item-box class="w-full" [fullWidthMode]="cols === 1"></app-item-box>
-    </mat-grid-tile>
+   
   </mat-grid-list>
   </mat-drawer-container>
 

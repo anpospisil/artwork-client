@@ -23,6 +23,7 @@ import { CardsHeaderComponent } from './pages/home/cards-header/cards-header.com
 import { FiltersComponent } from './pages/home/filters/filters.component';
 import { ItemBoxComponent } from './pages/home/item-box/item-box.component';
 import { StoreService } from './services/store.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -47,6 +48,7 @@ import { StoreService } from './services/store.service';
     MatDialogModule,
     MatMenuModule,
     MatExpansionModule,
+    HttpClientModule
   ],
   providers: [StoreService],
   bootstrap: [AppComponent]
